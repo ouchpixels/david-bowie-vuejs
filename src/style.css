@@ -1,0 +1,71 @@
+body {
+  width: 99vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #410800;
+  -webkit-overflow-scrolling: touch;
+}
+
+#app {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+svg {
+  margin: 0 auto;
+  width: 90vw;
+  height: auto;
+  max-height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#sticker-circle,
+#space-planet-overlay
+{
+  transition: 0.2s ease-in-out;
+}
+
+#sticker:hover, 
+#space-planet-overlay.active:hover  {
+  cursor: pointer;
+}
+
+.mobile {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/911157/ziggy-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  bacground-position: center;
+}
+
+/* Toggled classes */
+
+.ghost {
+  fill-opacity: 0;
+  stroke-width: 4px;
+  stroke: #fff4e9;
+}
+
+.active {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  svg {
+    width: 100vw;
+  }
+}
